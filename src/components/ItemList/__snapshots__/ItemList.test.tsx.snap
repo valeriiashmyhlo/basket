@@ -1,66 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ItemList /> tests should render ItemList with correct props 1`] = `
-<div>
+<div
+  class="itemList"
+>
   <div
     class="card"
+    style="width: 175px; margin: 10px;"
   >
-    <div
-      class="card-title h5"
-    >
-      Face Mask
-    </div>
     <div
       class="card-body"
     >
-      2.5
+      <div
+        class="card-title h5"
+      >
+        Face Mask
+      </div>
+      <p
+        class="card-text"
+      >
+        2.5
+      </p>
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Add to cart
+      </button>
     </div>
-    <button
-      class="btn btn-primary"
-      type="button"
-    >
-      Add to cart
-    </button>
   </div>
   <div
     class="card"
+    style="width: 175px; margin: 10px;"
   >
-    <div
-      class="card-title h5"
-    >
-      Toilet Paper
-    </div>
     <div
       class="card-body"
     >
-      0.65
+      <div
+        class="card-title h5"
+      >
+        Toilet Paper
+      </div>
+      <p
+        class="card-text"
+      >
+        0.65
+      </p>
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        Add to cart
+      </button>
     </div>
-    <button
-      class="btn btn-primary"
-      type="button"
-    >
-      Add to cart
-    </button>
-  </div>
-  <div
-    class="card"
-  >
-    <div
-      class="card-title h5"
-    >
-      Hand Sanitizer
-    </div>
-    <div
-      class="card-body"
-    >
-      19.99
-    </div>
-    <button
-      class="btn btn-primary"
-      type="button"
-    >
-      Add to cart
-    </button>
   </div>
 </div>
 `;

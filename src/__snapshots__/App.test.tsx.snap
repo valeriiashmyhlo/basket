@@ -1,69 +1,315 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders learn react link 1`] = `
+exports[`elements added to cart onClick add to cart 1`] = `
 <div
   class="App"
 >
-  <div>
+  <div
+    class="container"
+  >
     <div
-      class="card"
+      class="row"
     >
       <div
-        class="card-title h5"
+        class="col"
       >
-        Face Mask
+        <div
+          class="itemList"
+        >
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Face Mask
+              </div>
+              <p
+                class="card-text"
+              >
+                2.5
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Toilet Paper
+              </div>
+              <p
+                class="card-text"
+              >
+                0.65
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Hand Sanitizer
+              </div>
+              <p
+                class="card-text"
+              >
+                19.99
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        class="card-body"
+        class="col-lg-2 col"
       >
-        2.5
+        <div />
       </div>
-      <button
-        class="btn btn-primary"
-        type="button"
-      >
-        Add to cart
-      </button>
     </div>
+  </div>
+</div>
+`;
+
+exports[`elements added to cart onClick add to cart 2`] = `
+<div
+  class="App"
+>
+  <div
+    class="container"
+  >
     <div
-      class="card"
+      class="row"
     >
       <div
-        class="card-title h5"
+        class="col"
       >
-        Toilet Paper
+        <div
+          class="itemList"
+        >
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Face Mask
+              </div>
+              <p
+                class="card-text"
+              >
+                2.5
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Toilet Paper
+              </div>
+              <p
+                class="card-text"
+              >
+                0.65
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Hand Sanitizer
+              </div>
+              <p
+                class="card-text"
+              >
+                19.99
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        class="card-body"
+        class="col-lg-2 col"
       >
-        0.65
+        <div>
+          <div>
+            Face Mask
+             
+            1
+          </div>
+        </div>
       </div>
-      <button
-        class="btn btn-primary"
-        type="button"
-      >
-        Add to cart
-      </button>
     </div>
+  </div>
+</div>
+`;
+
+exports[`renders App component 1`] = `
+<div
+  class="App"
+>
+  <div
+    class="container"
+  >
     <div
-      class="card"
+      class="row"
     >
       <div
-        class="card-title h5"
+        class="col"
       >
-        Hand Sanitizer
+        <div
+          class="itemList"
+        >
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Face Mask
+              </div>
+              <p
+                class="card-text"
+              >
+                2.5
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Toilet Paper
+              </div>
+              <p
+                class="card-text"
+              >
+                0.65
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Hand Sanitizer
+              </div>
+              <p
+                class="card-text"
+              >
+                19.99
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div
-        class="card-body"
+        class="col-lg-2 col"
       >
-        19.99
+        <div />
       </div>
-      <button
-        class="btn btn-primary"
-        type="button"
-      >
-        Add to cart
-      </button>
     </div>
   </div>
 </div>

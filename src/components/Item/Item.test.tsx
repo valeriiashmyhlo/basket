@@ -6,16 +6,17 @@ import { Item } from "./Item";
 describe(`<Item /> tests`, () => {
   it("should render Item with correct props", () => {
     const props = {
+      id: '1',
       name: "Mask",
       price: 2.5,
     };
-    const onClick = jest.fn();
-    const { container } = render(<Item onAddToCart={onClick} {...props} />);
+    const { container } = render(<Item onAddToCart={() => {}} {...props} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should call onAddToCart", () => {
     const props = {
+      id: '1',
       name: "Mask",
       price: 2.5,
     };

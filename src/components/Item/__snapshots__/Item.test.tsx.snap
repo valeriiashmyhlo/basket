@@ -3,22 +3,27 @@
 exports[`<Item /> tests should render Item with correct props 1`] = `
 <div
   class="card"
+  style="width: 175px; margin: 10px;"
 >
-  <div
-    class="card-title h5"
-  >
-    Mask
-  </div>
   <div
     class="card-body"
   >
-    2.5
+    <div
+      class="card-title h5"
+    >
+      Mask
+    </div>
+    <p
+      class="card-text"
+    >
+      2.5
+    </p>
+    <button
+      class="btn btn-primary"
+      type="button"
+    >
+      Add to cart
+    </button>
   </div>
-  <button
-    class="btn btn-primary"
-    type="button"
-  >
-    Add to cart
-  </button>
 </div>
 `;

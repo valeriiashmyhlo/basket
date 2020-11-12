@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cart /> tests should render ItemList with correct props 1`] = `
+<div>
+  <div>
+    Face Mask
+     
+    2
+  </div>
+  <div>
+    Toilet Paper
+     
+    2
+  </div>
+</div>
+`;

@@ -1,21 +1,20 @@
 import * as React from "react";
 import { Item as ItemComponent } from "../Item";
+import styles from "./ItemList.module.scss";
+import { Item } from "../../types";
 
-interface Item {
-  name: string;
-  price: number;
-}
-
-interface ItemListProps {
+const ItemList: React.FC<{
   itemList: Item[];
-}
-
-const ItemList: React.FC<ItemListProps> = ({ itemList }) => {
-  const onAddToCart = () => {};
+  onAddToCart: (id: string) => void;
+}> = ({ itemList, onAddToCart }) => {
   return (
-    <div>
-      {itemList.map((item, i) => (
-        <ItemComponent key={i} onAddToCart={onAddToCart} {...item} />
+    <div className={styles.itemList}>
+      {itemList.map((item) => (
+        <ItemComponent
+          key={item.id}
+          onAddToCart={() => onAddToCart(item.id)}
+          {...item}
+        />
       ))}
     </div>
   );
