@@ -4,13 +4,13 @@ import "@testing-library/jest-dom/extend-expect";
 import { Item } from "./Item";
 
 describe(`<Item /> tests`, () => {
-  it("should render item with correct props", () => {
+  it("should render Item with correct props", () => {
     const props = {
       name: "Mask",
       price: 2.5,
     };
     const onClick = jest.fn();
-    const { container } = render(<Item onClick={onClick} {...props} />);
+    const { container } = render(<Item onAddToCart={onClick} {...props} />);
     expect(container.firstChild).toMatchSnapshot();
   });
 
@@ -20,7 +20,7 @@ describe(`<Item /> tests`, () => {
       price: 2.5,
     };
     const onClick = jest.fn();
-    const { getByText } = render(<Item onClick={onClick} {...props} />);
+    const { getByText } = render(<Item onAddToCart={onClick} {...props} />);
     fireEvent.click(getByText('Add to cart'));
     expect(onClick).toHaveBeenCalledTimes(1);
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Item /> tests should render item with correct props 1`] = `
+exports[`<Item /> tests should render Item with correct props 1`] = `
 <div
   class="card"
 >

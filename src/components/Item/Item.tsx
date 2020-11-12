@@ -1,18 +1,18 @@
 import * as React from "react";
 import { Card, Button } from "react-bootstrap";
 
-interface Item {
+interface ItemProps {
   name: string;
   price: number;
-  onClick: () => void;
+  onAddToCart: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-const Item: React.FC<Item> = ({ name, price, onClick }) => {
+const Item: React.FC<ItemProps> = ({ name, price, onAddToCart }) => {
   return (
     <Card>
       <Card.Title>{name}</Card.Title>
       <Card.Body>{price}</Card.Body>
-      <Button onClick={onClick}>Add to cart</Button>
+      <Button onClick={onAddToCart}>Add to cart</Button>
     </Card>
   );
 };
