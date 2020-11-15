@@ -14,6 +14,7 @@ const ItemList: React.FC<{
           key={item.id}
           onAddToCart={() => onAddToCart(item.id)}
           {...item}
+          price={item.priceRule.getPrice(1)}
         />
       ))}
     </div>

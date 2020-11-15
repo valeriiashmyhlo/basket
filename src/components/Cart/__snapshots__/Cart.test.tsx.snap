@@ -1,16 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Cart /> tests should render ItemList with correct props 1`] = `
+exports[`<Cart /> tests should apply correct rule 1`] = `
 <div>
-  <div>
-    Face Mask
-     
-    2
+  <div
+    class="cartItem my-2"
+  >
+    <span>
+      Toilet Paper
+    </span>
+    <span>
+      x 
+      2
+    </span>
+    <span>
+      £
+      4
+    </span>
   </div>
-  <div>
-    Toilet Paper
-     
-    2
+</div>
+`;
+
+exports[`<Cart /> tests should render CartList with correct props 1`] = `
+<div>
+  <div
+    class="cartItem my-2"
+  >
+    <span>
+      Face Mask
+    </span>
+    <span>
+      x 
+      2
+    </span>
+    <span>
+      £
+      8
+    </span>
+  </div>
+  <div
+    class="cartItem my-2"
+  >
+    <span>
+      Toilet Paper
+    </span>
+    <span>
+      x 
+      2
+    </span>
+    <span>
+      £
+      8
+    </span>
   </div>
 </div>
 `;

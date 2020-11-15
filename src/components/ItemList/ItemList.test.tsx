@@ -5,16 +5,25 @@ import { ItemList } from "./ItemList";
 
 describe(`<ItemList /> tests`, () => {
   it("should render ItemList with correct props", () => {
+    const price = 2.5;
     const items = [
       {
         id: "1",
         name: "Face Mask",
-        price: 2.5,
+        priceRule: {
+          getPrice(q: number) {
+            return q * price;
+          },
+        },
       },
       {
         id: "2",
         name: "Toilet Paper",
-        price: 0.65,
+        priceRule: {
+          getPrice(q: number) {
+            return q * price;
+          },
+        },
       },
     ];
     const { container } = render(
@@ -28,7 +37,11 @@ describe(`<ItemList /> tests`, () => {
       {
         id: "1",
         name: "Mask",
-        price: 2.5,
+        priceRule: {
+          getPrice(q: number) {
+            return q * 2.5;
+          },
+        },
       },
     ];
     const onAddToCart = jest.fn();
@@ -36,7 +49,7 @@ describe(`<ItemList /> tests`, () => {
       <ItemList itemList={items} onAddToCart={onAddToCart} />
     );
     fireEvent.click(getByText("Add to cart"));
-    expect(onAddToCart).toHaveBeenCalledWith('1');
+    expect(onAddToCart).toHaveBeenCalledWith("1");
     expect(onAddToCart).toHaveBeenCalledTimes(1);
   });
 });

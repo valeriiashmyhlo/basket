@@ -94,9 +94,13 @@ exports[`elements added to cart onClick add to cart 1`] = `
         </div>
       </div>
       <div
-        class="col-lg-2 col"
+        class="col-lg-3 col"
       >
-        <div />
+        <div>
+          <div>
+            Your cart is empty
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -197,13 +201,23 @@ exports[`elements added to cart onClick add to cart 2`] = `
         </div>
       </div>
       <div
-        class="col-lg-2 col"
+        class="col-lg-3 col"
       >
         <div>
-          <div>
-            Face Mask
-             
-            1
+          <div
+            class="cartItem my-2"
+          >
+            <span>
+              Face Mask
+            </span>
+            <span>
+              x 
+              1
+            </span>
+            <span>
+              £
+              2.5
+            </span>
           </div>
         </div>
       </div>
@@ -306,9 +320,13 @@ exports[`renders App component 1`] = `
         </div>
       </div>
       <div
-        class="col-lg-2 col"
+        class="col-lg-3 col"
       >
-        <div />
+        <div>
+          <div>
+            Your cart is empty
+          </div>
+        </div>
       </div>
     </div>
   </div>
