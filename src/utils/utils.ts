@@ -1,2 +1,2 @@
-export const roundToPrecision = (n: number, toFixedDigits: number): number =>
-  +parseFloat(n.toString()).toFixed(toFixedDigits);
+export const roundToPrecision = (n: number, precision: number): number =>
+  +parseFloat(n.toString()).toFixed(precision);

@@ -3,7 +3,7 @@
 exports[`<Cart /> tests should apply correct rule 1`] = `
 <div>
   <div
-    class="cartItem my-2"
+    class="cartItem my-1"
   >
     <span>
       Toilet Paper
@@ -16,6 +16,18 @@ exports[`<Cart /> tests should apply correct rule 1`] = `
       £
       4
     </span>
+    <button
+      class="btn btn-link"
+      type="button"
+    >
+      Remove
+    </button>
+  </div>
+  <div
+    class="my-4"
+  >
+    Total: £
+    4
   </div>
 </div>
 `;
@@ -23,7 +35,7 @@ exports[`<Cart /> tests should apply correct rule 1`] = `
 exports[`<Cart /> tests should render CartList with correct props 1`] = `
 <div>
   <div
-    class="cartItem my-2"
+    class="cartItem my-1"
   >
     <span>
       Face Mask
@@ -36,9 +48,15 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
       £
       8
     </span>
+    <button
+      class="btn btn-link"
+      type="button"
+    >
+      Remove
+    </button>
   </div>
   <div
-    class="cartItem my-2"
+    class="cartItem my-1"
   >
     <span>
       Toilet Paper
@@ -51,6 +69,18 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
       £
       8
     </span>
+    <button
+      class="btn btn-link"
+      type="button"
+    >
+      Remove
+    </button>
+  </div>
+  <div
+    class="my-4"
+  >
+    Total: £
+    16
   </div>
 </div>
 `;

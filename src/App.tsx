@@ -43,6 +43,13 @@ const App = () => {
     });
   };
 
+  const deleteItem = (id: string) => {
+    setCartList(prevState => {
+      delete prevState[id];
+      return {...prevState};
+    })
+  }
+
   return (
     <div className="App">
       <Container>
@@ -53,8 +60,8 @@ const App = () => {
               onAddToCart={onAddToCart}
             />
           </Col>
-          <Col xs lg="3">
-            <Cart items={Object.values(cartList)} />
+          <Col xs lg="4">
+            <Cart items={Object.values(cartList)} deleteItem={deleteItem} />
           </Col>
         </Row>
       </Container>

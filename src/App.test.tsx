@@ -12,4 +12,6 @@ test("elements added to cart onClick add to cart", () => {
   expect(container.firstChild).toMatchSnapshot();
   fireEvent.click(getAllByText("Add to cart")[0]);
   expect(container.firstChild).toMatchSnapshot();
+  fireEvent.click(getAllByText("Remove")[0]);
+  expect(container.firstChild).toMatchSnapshot();
 });

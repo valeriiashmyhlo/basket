@@ -94,12 +94,10 @@ exports[`elements added to cart onClick add to cart 1`] = `
         </div>
       </div>
       <div
-        class="col-lg-3 col"
+        class="col-lg-4 col"
       >
         <div>
-          <div>
-            Your cart is empty
-          </div>
+          Your cart is empty
         </div>
       </div>
     </div>
@@ -201,11 +199,11 @@ exports[`elements added to cart onClick add to cart 2`] = `
         </div>
       </div>
       <div
-        class="col-lg-3 col"
+        class="col-lg-4 col"
       >
         <div>
           <div
-            class="cartItem my-2"
+            class="cartItem my-1"
           >
             <span>
               Face Mask
@@ -218,7 +216,124 @@ exports[`elements added to cart onClick add to cart 2`] = `
               £
               2.5
             </span>
+            <button
+              class="btn btn-link"
+              type="button"
+            >
+              Remove
+            </button>
           </div>
+          <div
+            class="my-4"
+          >
+            Total: £
+            2.5
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`elements added to cart onClick add to cart 3`] = `
+<div
+  class="App"
+>
+  <div
+    class="container"
+  >
+    <div
+      class="row"
+    >
+      <div
+        class="col"
+      >
+        <div
+          class="itemList"
+        >
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Face Mask
+              </div>
+              <p
+                class="card-text"
+              >
+                2.5
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Toilet Paper
+              </div>
+              <p
+                class="card-text"
+              >
+                0.65
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="width: 175px; margin: 10px;"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="card-title h5"
+              >
+                Hand Sanitizer
+              </div>
+              <p
+                class="card-text"
+              >
+                19.99
+              </p>
+              <button
+                class="btn btn-primary"
+                type="button"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="col-lg-4 col"
+      >
+        <div>
+          Your cart is empty
         </div>
       </div>
     </div>
@@ -320,12 +435,10 @@ exports[`renders App component 1`] = `
         </div>
       </div>
       <div
-        class="col-lg-3 col"
+        class="col-lg-4 col"
       >
         <div>
-          <div>
-            Your cart is empty
-          </div>
+          Your cart is empty
         </div>
       </div>
     </div>
