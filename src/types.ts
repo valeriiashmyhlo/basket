@@ -1,14 +1,12 @@
-export type PriceRule = (
-  this: Item,
-  quantity: number
-) => { total: number; savings: number };
+export interface PricedItem {
+  pricePerUnit: number;
+  unitsPerItem: number;
+}
 
-export interface Item {
+export interface Item extends PricedItem {
   id: string;
   name: string;
   unit: string;
-  pricePerUnit: number;
-  unitsPerItem: number;
   priceRule: PriceRule;
   priceRuleText: string;
 }
@@ -17,3 +15,8 @@ export interface CartItem {
   item: Item;
   quantity: number;
 }
+
+export type PriceRule = (
+  this: PricedItem,
+  quantity: number
+) => { total: number; savings: number };

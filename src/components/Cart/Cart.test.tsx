@@ -29,20 +29,21 @@ describe(`<Cart /> tests`, () => {
     },
     quantity: 1,
   };
+
   it("should render CartList with correct props", () => {
     const { container } = render(
-      <Cart items={[item1, item2]} onDeleteItem={() => jest.fn()} />
+      <Cart items={[item1, item2]} onDeleteItem={() => {}} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 
   it("should call onDeleteItem", () => {
-    const onDelete = jest.fn();
+    const onDeleteItem = jest.fn();
     const { getByText } = render(
-      <Cart items={[item2]} onDeleteItem={onDelete} />
+      <Cart items={[item2]} onDeleteItem={onDeleteItem} />
     );
     fireEvent.click(getByText("Remove"));
-    expect(onDelete).toHaveBeenCalledTimes(1);
-    expect(onDelete).toHaveBeenCalledWith("2");
+    expect(onDeleteItem).toHaveBeenCalledTimes(1);
+    expect(onDeleteItem).toHaveBeenCalledWith("2");
   });
 });

@@ -16,9 +16,9 @@ describe(`<Item /> tests`, () => {
   });
 
   it("should call onAddToCart", () => {
-    const onClick = jest.fn();
-    const { getByText } = render(<Item onAddToCart={onClick} {...props} />);
+    const onAddToCart = jest.fn();
+    const { getByText } = render(<Item onAddToCart={onAddToCart} {...props} />);
     fireEvent.click(getByText('Add to cart'));
-    expect(onClick).toHaveBeenCalledTimes(1);
+    expect(onAddToCart).toHaveBeenCalledTimes(1);
   });
 });

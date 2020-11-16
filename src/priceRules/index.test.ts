@@ -4,13 +4,9 @@ import { buildDefault, buildNForPrice, buildNForM } from "./index";
 describe("buildDefault", () => {
   it("should get correct total and savings", () => {
     const item = {
-      id: "3",
-      name: "Hand Sanitizer",
       pricePerUnit: 19.99,
-      unit: "liter",
       unitsPerItem: 0.9,
       priceRule: buildDefault(),
-      priceRuleText: "",
     };
 
     expectToBeCloseTo(item.priceRule(1), { total: 17.991, savings: 0 });
@@ -22,13 +18,9 @@ describe("buildDefault", () => {
 describe("buildNForPrice", () => {
   it("should get correct total and savings", () => {
     const item = {
-      id: "3",
-      name: "Hand Sanitizer",
       pricePerUnit: 3,
-      unit: "liter",
       unitsPerItem: 1.5,
       priceRule: buildNForPrice(2, 5),
-      priceRuleText: "",
     };
 
     expectToBeCloseTo(item.priceRule(1), { total: 4.5, savings: 0 });
@@ -40,18 +32,15 @@ describe("buildNForPrice", () => {
 describe("buildNForM", () => {
   it("should get correct total and savings", () => {
     const item = {
-      id: "2",
-      name: "Toilet Paper",
-      pricePerUnit: 0.65,
-      unit: "roll",
-      unitsPerItem: 1,
-      priceRule: buildNForM(6, 5),
-      priceRuleText: "Toilet Paper 6 for 5",
+      pricePerUnit: 2,
+      unitsPerItem: 1.5,
+      priceRule: buildNForM(3, 2),
     };
 
-    expectToBeCloseTo(item.priceRule(1), { total: 0.65, savings: 0 });
-    expectToBeCloseTo(item.priceRule(6), { total: 3.25, savings: 0.65 });
-    expectToBeCloseTo(item.priceRule(7), { total: 3.90, savings: 0.65 });
+    expectToBeCloseTo(item.priceRule(1), { total: 3, savings: 0 });
+    expectToBeCloseTo(item.priceRule(2), { total: 4, savings: 2 });
+    expectToBeCloseTo(item.priceRule(3), { total: 7, savings: 2 });
+    expectToBeCloseTo(item.priceRule(4), { total: 8, savings: 4 });
   });
 });
 

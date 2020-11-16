@@ -18,7 +18,7 @@ const Cart: React.FC<{
   items: CartItem[];
   onDeleteItem: (id: string) => void;
 }> = ({ items, onDeleteItem }) => {
-  const memoItemsList = React.useMemo(() => getItemsList(items), [items]);
+  const itemsList = React.useMemo(() => getItemsList(items), [items]);
 
   if (items.length === 0) {
     return <div>Your cart is empty</div>;
@@ -44,7 +44,7 @@ const Cart: React.FC<{
         </tr>
       </thead>
       <tbody>
-        {memoItemsList.map((item, i) => (
+        {itemsList.map((item, i) => (
           <tr key={i}>
             <td>{item.name}</td>
             <td>{item.unitsPerItem !== 1 ? item.unitsPerItem : null}</td>
