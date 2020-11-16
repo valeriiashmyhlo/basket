@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import { Col, Container, Row } from "react-bootstrap";
 import { ItemList } from "./components/ItemList";
 import { Cart } from "./components/Cart";
@@ -33,7 +32,7 @@ const GOODS: { [index: string]: Item } = {
     unitsPerItem: 0.175,
     priceRule: buildDefault(),
     priceRuleText: "",
-  },
+  }
 };
 
 const App = () => {
@@ -57,8 +56,16 @@ const App = () => {
 
   const onDeleteItem = (id: string) => {
     setCartList((prevState) => {
-      delete prevState[id];
-      return { ...prevState };
+      if (prevState[id].quantity === 1) {
+        const state = { ...prevState };
+        delete state[id];
+        return state;
+      } else {
+        return {
+          ...prevState,
+          [id]: { ...prevState[id], quantity: prevState[id].quantity - 1 },
+        };
+      }
     });
   };
 
@@ -68,7 +75,7 @@ const App = () => {
         <Col>
           <ItemList itemList={Object.values(GOODS)} onAddToCart={onAddToCart} />
         </Col>
-        <Col xs lg="4">
+        <Col xs lg="5">
           <Cart items={Object.values(cartList)} onDeleteItem={onDeleteItem} />
         </Col>
       </Row>

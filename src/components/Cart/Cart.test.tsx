@@ -27,18 +27,11 @@ describe(`<Cart /> tests`, () => {
       priceRule: buildNForM(6, 5),
       priceRuleText: "Toilet Paper 6 for 5",
     },
-    quantity: 2,
+    quantity: 1,
   };
   it("should render CartList with correct props", () => {
     const { container } = render(
       <Cart items={[item1, item2]} onDeleteItem={() => jest.fn()} />
-    );
-    expect(container.firstChild).toMatchSnapshot();
-  });
-
-  it("should apply correct rule", () => {
-    const { container } = render(
-      <Cart items={[item1]} onDeleteItem={() => jest.fn()} />
     );
     expect(container.firstChild).toMatchSnapshot();
   });

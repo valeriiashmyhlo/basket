@@ -15,7 +15,6 @@ const ItemList: React.FC<{
           onAddToCart={() => onAddToCart(item.id)}
           {...item}
           price={item.pricePerUnit}
-          // price={item.priceRule.getPrice(1)}
         />
       ))}
     </div>

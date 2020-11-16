@@ -97,7 +97,7 @@ exports[`elements added to cart onClick add to cart 1`] = `
       </div>
     </div>
     <div
-      class="col-lg-4 col"
+      class="col-lg-5 col"
     >
       <div>
         Your cart is empty
@@ -204,20 +204,18 @@ exports[`elements added to cart onClick add to cart 2`] = `
       </div>
     </div>
     <div
-      class="col-lg-4 col"
+      class="col-lg-5 col"
     >
       <table
         class="table table-sm table-striped"
       >
         <thead>
           <tr>
-            <th>
+            <th
+              colspan="4"
+            >
               Title
             </th>
-            <th>
-              Qty
-            </th>
-            <th />
             <th>
               Price
             </th>
@@ -229,8 +227,12 @@ exports[`elements added to cart onClick add to cart 2`] = `
               Face Mask
             </td>
             <td>
-              x 
               1
+            </td>
+            <td>
+              2.5
+              /
+              each
             </td>
             <td>
               <button
@@ -247,33 +249,30 @@ exports[`elements added to cart onClick add to cart 2`] = `
           <tr>
             <td
               class="bold"
+              colspan="4"
             >
               Sub-total:
             </td>
-            <td />
-            <td />
             <td>
+              £
               2.5
             </td>
           </tr>
           <tr>
             <td
               class="bold"
+              colspan="5"
             >
               Savings
             </td>
-            <td />
-            <td />
-            <td />
           </tr>
           <tr>
             <td
               class="bold"
+              colspan="4"
             >
               Total Savings:
             </td>
-            <td />
-            <td />
             <td>
               0
             </td>
@@ -281,12 +280,12 @@ exports[`elements added to cart onClick add to cart 2`] = `
           <tr>
             <td
               class="bold"
+              colspan="4"
             >
               Total to Pay:
             </td>
-            <td />
-            <td />
             <td>
+              £
               2.5
             </td>
           </tr>
@@ -394,7 +393,7 @@ exports[`elements added to cart onClick add to cart 3`] = `
       </div>
     </div>
     <div
-      class="col-lg-4 col"
+      class="col-lg-5 col"
     >
       <div>
         Your cart is empty
@@ -501,7 +500,7 @@ exports[`renders App component 1`] = `
       </div>
     </div>
     <div
-      class="col-lg-4 col"
+      class="col-lg-5 col"
     >
       <div>
         Your cart is empty

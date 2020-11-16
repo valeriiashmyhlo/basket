@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button, Table } from "react-bootstrap";
-import { CartItem } from "../../types";
+import { CartItem, Item } from "../../types";
 import styles from "./Cart.module.scss";
 import { roundToPrecision } from "../../utils/utils";
 
@@ -23,65 +23,64 @@ const Cart: React.FC<{
     { total: 0, savings: 0 }
   );
 
+  const getItemsList = (items: CartItem[]): Item[] => {
+    const list: Item[] = [];
+    for (const item of items) {
+      for (let i = 0; i < item.quantity; i++) {
+        list.push(item.item);
+      }
+    }
+    return list;
+  };
+
   const subTotal = roundToPrecision(total + savingsTotal, 2);
 
   return (
     <Table striped size="sm">
       <thead>
         <tr>
-          <th>Title</th>
-          <th>Qty</th>
-          <th />
+          <th colSpan={4}>Title</th>
           <th>Price</th>
         </tr>
       </thead>
       <tbody>
-        {items.map(({ item, quantity }) => (
-          <tr key={item.id}>
+        {getItemsList(items).map((item, i) => (
+          <tr key={i}>
             <td>{item.name}</td>
-            <td>x {quantity}</td>
+            <td>{item.unitsPerItem}</td>
+            <td>
+              {item.pricePerUnit}/{item.unit}
+            </td>
             <td>
               <Button size="sm" onClick={() => onDeleteItem(item.id)}>
                 Remove
               </Button>
             </td>
-            {/*<td>{roundToPrecision(item.pricePerUnit * quantity, 2)}</td>*/}
-            <td>{roundToPrecision(item.priceRule(quantity).total, 2)}</td>
+            <td>{roundToPrecision(item.priceRule(1).total, 2)}</td>
           </tr>
         ))}
         <tr>
-          <td className={styles.bold}>Sub-total:</td>
-          <td></td>
-          <td></td>
-          <td>{subTotal}</td>
+          <td colSpan={4} className={styles.bold}>Sub-total:</td>
+          <td>£{subTotal}</td>
         </tr>
         <tr>
-          <td className={styles.bold}>Savings</td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td colSpan={5} className={styles.bold}>Savings</td>
         </tr>
         {items.map(({ item, quantity }) =>
           item.priceRule(quantity).savings ? (
             <tr key={item.id}>
-              <td>{item.priceRuleText}</td>
-              <td />
-              <td />
+              <td colSpan={4}>{item.priceRuleText}</td>
               <td>-{roundToPrecision(item.priceRule(quantity).savings, 2)}</td>
             </tr>
           ) : null
         )}
         <tr>
-          <td className={styles.bold}>Total Savings:</td>
-          <td />
-          <td />
+          <td colSpan={4} className={styles.bold}>Total Savings:</td>
           <td>{-savingsTotal}</td>
         </tr>
         <tr>
-          <td className={styles.bold}>Total to Pay:</td>
-          <td />
-          <td />
-          <td>{total}</td>
+          <td colSpan={4} className={styles.bold}>Total to Pay:</td>
+          <td>£{total}</td>
         </tr>
       </tbody>
     </Table>

@@ -13,7 +13,9 @@ describe("buildDefault", () => {
       priceRuleText: "",
     };
 
+    expectToBeCloseTo(item.priceRule(1), { total: 17.991, savings: 0 });
     expectToBeCloseTo(item.priceRule(2), { total: 35.98, savings: 0 });
+    expectToBeCloseTo(item.priceRule(3), { total: 53.973, savings: 0 });
   });
 });
 
