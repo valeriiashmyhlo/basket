@@ -32,7 +32,7 @@ const GOODS: { [index: string]: Item } = {
     unitsPerItem: 0.175,
     priceRule: buildDefault(),
     priceRuleText: "",
-  }
+  },
 };
 
 const App = () => {
@@ -40,7 +40,7 @@ const App = () => {
     {}
   );
 
-  const onAddToCart = (id: string) => {
+  const onAddToCart = React.useCallback((id: string) => {
     setCartList((prevState) => {
       const cartItem =
         id in prevState
@@ -52,9 +52,9 @@ const App = () => {
         [id]: cartItem,
       };
     });
-  };
+  }, []);
 
-  const onDeleteItem = (id: string) => {
+  const onDeleteItem = React.useCallback((id: string) => {
     setCartList((prevState) => {
       if (prevState[id].quantity === 1) {
         const state = { ...prevState };
@@ -67,16 +67,22 @@ const App = () => {
         };
       }
     });
-  };
+  }, []);
 
   return (
     <Container>
       <Row>
         <Col>
-          <ItemList itemList={Object.values(GOODS)} onAddToCart={onAddToCart} />
+          <ItemList
+            itemList={React.useMemo(() => Object.values(GOODS), [])}
+            onAddToCart={onAddToCart}
+          />
         </Col>
         <Col xs lg="5">
-          <Cart items={Object.values(cartList)} onDeleteItem={onDeleteItem} />
+          <Cart
+            items={React.useMemo(() => Object.values(cartList), [cartList])}
+            onDeleteItem={onDeleteItem}
+          />
         </Col>
       </Row>
     </Container>

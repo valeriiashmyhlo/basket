@@ -1,134 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Cart /> tests should apply correct rule 1`] = `
-<table
-  class="table table-sm table-striped"
->
-  <thead>
-    <tr>
-      <th
-        colspan="4"
-      >
-        Title
-      </th>
-      <th>
-        Price
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        Face Mask
-      </td>
-      <td>
-        1
-      </td>
-      <td>
-        2.5
-        /
-        each
-      </td>
-      <td>
-        <button
-          class="btn btn-primary btn-sm"
-          type="button"
-        >
-          Remove
-        </button>
-      </td>
-      <td>
-        2.5
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Face Mask
-      </td>
-      <td>
-        1
-      </td>
-      <td>
-        2.5
-        /
-        each
-      </td>
-      <td>
-        <button
-          class="btn btn-primary btn-sm"
-          type="button"
-        >
-          Remove
-        </button>
-      </td>
-      <td>
-        2.5
-      </td>
-    </tr>
-    <tr>
-      <td
-        class="bold"
-        colspan="4"
-      >
-        Sub-total:
-      </td>
-      <td>
-        £
-        5
-      </td>
-    </tr>
-    <tr>
-      <td
-        class="bold"
-        colspan="5"
-      >
-        Savings
-      </td>
-    </tr>
-    <tr>
-      <td
-        colspan="4"
-      >
-        Face Masks 2 for £4
-      </td>
-      <td>
-        -
-        1
-      </td>
-    </tr>
-    <tr>
-      <td
-        class="bold"
-        colspan="4"
-      >
-        Total Savings:
-      </td>
-      <td>
-        -1
-      </td>
-    </tr>
-    <tr>
-      <td
-        class="bold"
-        colspan="4"
-      >
-        Total to Pay:
-      </td>
-      <td>
-        £
-        4
-      </td>
-    </tr>
-  </tbody>
-</table>
-`;
-
 exports[`<Cart /> tests should render CartList with correct props 1`] = `
 <table
-  class="table table-sm table-striped"
+  class="table table-sm"
 >
   <thead>
-    <tr>
+    <tr
+      class="bold"
+    >
       <th
         colspan="4"
       >
@@ -144,9 +23,7 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
       <td>
         Face Mask
       </td>
-      <td>
-        1
-      </td>
+      <td />
       <td>
         2.5
         /
@@ -168,9 +45,7 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
       <td>
         Face Mask
       </td>
-      <td>
-        1
-      </td>
+      <td />
       <td>
         2.5
         /
@@ -192,9 +67,7 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
       <td>
         Toilet Paper
       </td>
-      <td>
-        1
-      </td>
+      <td />
       <td>
         0.65
         /
@@ -212,9 +85,10 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
         0.65
       </td>
     </tr>
-    <tr>
+    <tr
+      class="bold"
+    >
       <td
-        class="bold"
         colspan="4"
       >
         Sub-total:
@@ -224,9 +98,10 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
         5.65
       </td>
     </tr>
-    <tr>
+    <tr
+      class="bold"
+    >
       <td
-        class="bold"
         colspan="5"
       >
         Savings
@@ -243,9 +118,10 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
         1
       </td>
     </tr>
-    <tr>
+    <tr
+      class="bold"
+    >
       <td
-        class="bold"
         colspan="4"
       >
         Total Savings:
@@ -254,9 +130,10 @@ exports[`<Cart /> tests should render CartList with correct props 1`] = `
         -1
       </td>
     </tr>
-    <tr>
+    <tr
+      class="bold"
+    >
       <td
-        class="bold"
         colspan="4"
       >
         Total to Pay:

@@ -207,10 +207,12 @@ exports[`elements added to cart onClick add to cart 2`] = `
       class="col-lg-5 col"
     >
       <table
-        class="table table-sm table-striped"
+        class="table table-sm"
       >
         <thead>
-          <tr>
+          <tr
+            class="bold"
+          >
             <th
               colspan="4"
             >
@@ -226,9 +228,7 @@ exports[`elements added to cart onClick add to cart 2`] = `
             <td>
               Face Mask
             </td>
-            <td>
-              1
-            </td>
+            <td />
             <td>
               2.5
               /
@@ -246,9 +246,10 @@ exports[`elements added to cart onClick add to cart 2`] = `
               2.5
             </td>
           </tr>
-          <tr>
+          <tr
+            class="bold"
+          >
             <td
-              class="bold"
               colspan="4"
             >
               Sub-total:
@@ -258,17 +259,19 @@ exports[`elements added to cart onClick add to cart 2`] = `
               2.5
             </td>
           </tr>
-          <tr>
+          <tr
+            class="bold"
+          >
             <td
-              class="bold"
               colspan="5"
             >
               Savings
             </td>
           </tr>
-          <tr>
+          <tr
+            class="bold"
+          >
             <td
-              class="bold"
               colspan="4"
             >
               Total Savings:
@@ -277,9 +280,10 @@ exports[`elements added to cart onClick add to cart 2`] = `
               0
             </td>
           </tr>
-          <tr>
+          <tr
+            class="bold"
+          >
             <td
-              class="bold"
               colspan="4"
             >
               Total to Pay:

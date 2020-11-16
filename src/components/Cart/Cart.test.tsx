@@ -43,5 +43,6 @@ describe(`<Cart /> tests`, () => {
     );
     fireEvent.click(getByText("Remove"));
     expect(onDelete).toHaveBeenCalledTimes(1);
+    expect(onDelete).toHaveBeenCalledWith("2");
   });
 });
