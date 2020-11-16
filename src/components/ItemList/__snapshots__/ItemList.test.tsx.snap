@@ -20,6 +20,8 @@ exports[`<ItemList /> tests should render ItemList with correct props 1`] = `
         class="card-text"
       >
         2.5
+         / 
+        each
       </p>
       <button
         class="btn btn-primary"
@@ -44,7 +46,9 @@ exports[`<ItemList /> tests should render ItemList with correct props 1`] = `
       <p
         class="card-text"
       >
-        2.5
+        0.65
+         / 
+        roll
       </p>
       <button
         class="btn btn-primary"

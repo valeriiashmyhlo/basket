@@ -4,23 +4,35 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ItemList } from "./components/ItemList";
 import { Cart } from "./components/Cart";
 import { Item, CartItem } from "./types";
-import { NForPrice, DefaultRule, NForM } from "./priceRules";
+import { buildDefault, buildNForM, buildNForPrice } from "./priceRules";
 
 const GOODS: { [index: string]: Item } = {
   1: {
     id: "1",
     name: "Face Mask",
-    priceRule: new NForPrice(2, 2.5, 4.0),
+    pricePerUnit: 2.5,
+    unit: "each",
+    unitsPerItem: 1,
+    priceRule: buildNForPrice(2, 4),
+    priceRuleText: "Face Masks 2 for £4",
   },
   2: {
     id: "2",
     name: "Toilet Paper",
-    priceRule: new NForM(6, 5, 0.65),
+    pricePerUnit: 0.65,
+    unit: "roll",
+    unitsPerItem: 1,
+    priceRule: buildNForM(6, 5),
+    priceRuleText: "Toilet Paper 6 for 5",
   },
   3: {
     id: "3",
     name: "Hand Sanitizer",
-    priceRule: new DefaultRule(19.99),
+    pricePerUnit: 19.99,
+    unit: "liter",
+    unitsPerItem: 0.175,
+    priceRule: buildDefault(),
+    priceRuleText: "",
   },
 };
 
@@ -43,29 +55,24 @@ const App = () => {
     });
   };
 
-  const deleteItem = (id: string) => {
-    setCartList(prevState => {
+  const onDeleteItem = (id: string) => {
+    setCartList((prevState) => {
       delete prevState[id];
-      return {...prevState};
-    })
-  }
+      return { ...prevState };
+    });
+  };
 
   return (
-    <div className="App">
-      <Container>
-        <Row>
-          <Col>
-            <ItemList
-              itemList={Object.values(GOODS)}
-              onAddToCart={onAddToCart}
-            />
-          </Col>
-          <Col xs lg="4">
-            <Cart items={Object.values(cartList)} deleteItem={deleteItem} />
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <ItemList itemList={Object.values(GOODS)} onAddToCart={onAddToCart} />
+        </Col>
+        <Col xs lg="4">
+          <Cart items={Object.values(cartList)} onDeleteItem={onDeleteItem} />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

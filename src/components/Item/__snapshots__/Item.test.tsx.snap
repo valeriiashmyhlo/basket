@@ -17,6 +17,8 @@ exports[`<Item /> tests should render Item with correct props 1`] = `
       class="card-text"
     >
       2.5
+       / 
+      each
     </p>
     <button
       class="btn btn-primary"
